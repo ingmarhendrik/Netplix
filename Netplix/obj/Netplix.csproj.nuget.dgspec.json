@@ -65,6 +65,14 @@
               "target": "Package",
               "version": "[2.0.0, )"
             },
+            "CommunityToolkit.Mvvm": {
+              "target": "Package",
+              "version": "[8.2.2, )"
+            },
+            "Microsoft.Extensions.Http": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "Microsoft.Maui.Dependencies": {
               "target": "Package",
               "version": "[6.0.553, )",
@@ -74,6 +82,10 @@
               "target": "Package",
               "version": "[6.0.553, )",
               "autoReferenced": true
+            },
+            "Microsoft.UI.Xaml": {
+              "target": "Package",
+              "version": "[2.8.2, )"
             }
           },
           "imports": [
@@ -171,6 +183,14 @@
               "target": "Package",
               "version": "[2.0.0, )"
             },
+            "CommunityToolkit.Mvvm": {
+              "target": "Package",
+              "version": "[8.2.2, )"
+            },
+            "Microsoft.Extensions.Http": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "Microsoft.Maui.Dependencies": {
               "target": "Package",
               "version": "[6.0.553, )",
@@ -180,6 +200,10 @@
               "target": "Package",
               "version": "[6.0.553, )",
               "autoReferenced": true
+            },
+            "Microsoft.UI.Xaml": {
+              "target": "Package",
+              "version": "[2.8.2, )"
             },
             "System.Runtime.InteropServices.NFloat.Internal": {
               "target": "Package",
@@ -258,6 +282,14 @@
               "target": "Package",
               "version": "[2.0.0, )"
             },
+            "CommunityToolkit.Mvvm": {
+              "target": "Package",
+              "version": "[8.2.2, )"
+            },
+            "Microsoft.Extensions.Http": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "Microsoft.Maui.Dependencies": {
               "target": "Package",
               "version": "[6.0.553, )",
@@ -267,6 +299,10 @@
               "target": "Package",
               "version": "[6.0.553, )",
               "autoReferenced": true
+            },
+            "Microsoft.UI.Xaml": {
+              "target": "Package",
+              "version": "[2.8.2, )"
             },
             "System.Runtime.InteropServices.NFloat.Internal": {
               "target": "Package",
@@ -346,6 +382,14 @@
               "target": "Package",
               "version": "[2.0.0, )"
             },
+            "CommunityToolkit.Mvvm": {
+              "target": "Package",
+              "version": "[8.2.2, )"
+            },
+            "Microsoft.Extensions.Http": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "Microsoft.Maui.Dependencies": {
               "target": "Package",
               "version": "[6.0.553, )",
@@ -355,6 +399,10 @@
               "target": "Package",
               "version": "[6.0.553, )",
               "autoReferenced": true
+            },
+            "Microsoft.UI.Xaml": {
+              "target": "Package",
+              "version": "[2.8.2, )"
             }
           },
           "imports": [

@@ -19,6 +19,7 @@
 		<ApplicationIdGuid>1d2439d0-8c2b-4da5-8f25-443b40ac384e</ApplicationIdGuid>
 
 		<!-- Versions -->
+		<WindowsPackageType Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">None</WindowsPackageType>
 		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
 		<ApplicationVersion>1</ApplicationVersion>
 
@@ -51,10 +52,30 @@
 	<ItemGroup>
 	  <None Remove="Resources\Fonts\Poppins-Regular.ttf" />
 	  <None Remove="Resources\Fonts\Poppins-SemiBold.ttf" />
+	  <None Remove="Resources\Images\brand_netflix.svg" />
+	  <None Remove="Resources\Images\download.svg" />
+	  <None Remove="Resources\Images\game.svg" />
+	  <None Remove="Resources\Images\hometab.svg" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <PackageReference Include="CommunityToolkit.Maui" Version="2.0.0" />
+	  <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
+	  <PackageReference Include="Microsoft.Extensions.Http" Version="8.0.0" />
+	  <PackageReference Include="Microsoft.UI.Xaml" Version="2.8.2" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="Pages\MainPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Models\" />
+	  <Folder Include="Controllers\" />
+	  <Folder Include="ViewModels\" />
+	  <Folder Include="Services\" />
 	</ItemGroup>
 
 </Project>

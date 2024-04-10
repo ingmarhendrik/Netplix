@@ -8,7 +8,7 @@ namespace Netplix.Services
 {
     public partial class TmdbService
     {
-        private const string ApiKey = "";
+        private const string ApiKey = "c52c7c6441a1d9f805a2394a44951db2";
         public const string TmdbHttpClientName = "TmdbClient";
 
         private readonly IHttpClientFactory _httpClientFactory;
@@ -20,22 +20,24 @@ namespace Netplix.Services
 
         private HttpClient HttpClient => _httpClientFactory.CreateClient(TmdbHttpClientName);
 
-        public async Task<IEnumerable<Media>> GetTrendingAsync()
-        {
-            var trendingMoviesCollection = await HttpClient.GetFromJsonAsync<Movie>($"{TmdbUrls.Trending}&api_key={ApiKey}");
-            return trendingMoviesCollection.results
-                .Select(r => r.ToMediaObject());
-        }
-
-        /* public async Task<IEnumerable<Media>> GetTrendingAsync() =>
+        public async Task<IEnumerable<Media>> GetTrendingAsync() =>
             await GetMediasAsync(TmdbUrls.Trending);
-
         public async Task<IEnumerable<Media>> GetTopRatedAsync() =>
             await GetMediasAsync(TmdbUrls.TopRated);
         public async Task<IEnumerable<Media>> GetNetflixOriginalAsync() =>
             await GetMediasAsync(TmdbUrls.NetflixOriginals);
         public async Task<IEnumerable<Media>> GetActionAsync() =>
             await GetMediasAsync(TmdbUrls.Action);
+
+        private async Task<IEnumerable<Media>> GetMediasAsync(string url)
+        {
+            var trendingMoviesCollection = await HttpClient.GetFromJsonAsync<Movie>($"{url}&api_key={ApiKey}");
+            return trendingMoviesCollection.results
+                    .Select(r => r.ToMediaObject());
+        }
+
+        /* public async Task<IEnumerable<Media>> GetTrendingAsync() =>
+            await GetMediasAsync(TmdbUrls.Trending);
 
         public async Task<IEnumerable<Video>?> GetTrailersAsync(int id, string type = "movie")
         {
@@ -58,12 +60,6 @@ namespace Netplix.Services
             await GetMediasAsync(
                 $"{TmdbUrls.GetSimilar(id, type)}&api_key={ApiKey}");
 
-        private async Task<IEnumerable<Media>> GetMediasAsync(string url)
-        {
-            var trendingMoviesCollection = await HttpClient.GetFromJsonAsync<Movie>($"{url}&api_key={ApiKey}");
-            return trendingMoviesCollection.results
-                    .Select(r => r.ToMediaObject());
-        }
     } */
         public static class TmdbUrls
         {

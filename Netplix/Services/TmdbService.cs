@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Models;
+using System;
 using System.Collections.Generic;
 using System.Net.Http.Json;
 using System.Text;
@@ -19,10 +20,11 @@ namespace Netplix.Services
 
         private HttpClient HttpClient => _httpClientFactory.CreateClient(TmdbHttpClientName);
 
-        public async Task<IEnumerable<Result>> GetTrendingAsync()
+        public async Task<IEnumerable<Media>> GetTrendingAsync()
         {
             var trendingMoviesCollection = await HttpClient.GetFromJsonAsync<Movie>($"{TmdbUrls.Trending}&api_key={ApiKey}");
-            return trendingMoviesCollection.results;
+            return trendingMoviesCollection.results
+                .Select(r => r.ToMediaObject());
         }
 
         /* public async Task<IEnumerable<Media>> GetTrendingAsync() =>
@@ -105,7 +107,7 @@ namespace Netplix.Services
         public string DisplayTitle => title ?? name ?? original_title ?? original_name;
 
         public Media ToMediaObject() =>
-            new()
+            new ()
             {
                 Id = id,
                 DisplayTitle = DisplayTitle,

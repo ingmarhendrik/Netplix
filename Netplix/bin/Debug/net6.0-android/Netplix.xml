@@ -6,9 +6,19 @@
     <members>
         <member name="T:Netplix.ViewModels.HomeViewModel">
             <inheritdoc/>
+            <inheritdoc/>
         </member>
         <member name="P:Netplix.ViewModels.HomeViewModel.TrendingMovie">
             <inheritdoc cref="F:Netplix.ViewModels.HomeViewModel._trendingMovie"/>
+        </member>
+        <member name="P:Netplix.ViewModels.HomeViewModel.SelectedMedia">
+            <inheritdoc cref="F:Netplix.ViewModels.HomeViewModel._selectedMedia"/>
+        </member>
+        <member name="F:Netplix.ViewModels.HomeViewModel.selectMediaCommand">
+            <summary>The backing field for <see cref="P:Netplix.ViewModels.HomeViewModel.SelectMediaCommand"/>.</summary>
+        </member>
+        <member name="P:Netplix.ViewModels.HomeViewModel.SelectMediaCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:Netplix.ViewModels.HomeViewModel.SelectMedia(Models.Media)"/>.</summary>
         </member>
         <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Button.TextColorTo(Microsoft.Maui.Controls.Button,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing)">
             <summary>
@@ -118,6 +128,9 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.TrendingMovie">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "TrendingMovie" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedMedia">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedMedia" generated properties.</summary>
+        </member>
         <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
             <summary>
             A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
@@ -126,6 +139,12 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.TrendingMovie">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "TrendingMovie" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedMedia">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedMedia" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ShowMovieInfoBox">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ShowMovieInfoBox" generated properties.</summary>
         </member>
     </members>
 </doc>

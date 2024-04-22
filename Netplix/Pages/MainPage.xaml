@@ -2,17 +2,18 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Netplix.Pages.MainPage"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="Black"
              Title="Netplix">
 
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <Style TargetType="Label" x:Key="MenuLabel">
-                <Setter Property="FontSize" Value="15"/>
-                <Setter Property="FontAttributes" Value="Bold"/>
-                <Setter Property="VerticalTextAlignment" Value="Center"/>
-                <Setter Property="TextColor" Value="White"/>
-            </Style>
-        </ResourceDictionary>
-    </ContentPage.Resources>
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+            
+            
+        </VerticalStackLayout>
+    </ScrollView>
 
 </ContentPage>

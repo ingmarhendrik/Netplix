@@ -4,8 +4,8 @@
              x:Class="Netplix.Pages.MainPage"
              Shell.NavBarIsVisible="False"
              BackgroundColor="Black"
-             xmlns:vm="clr-namespace:Netplix.ViewModels"
-             xmlns:controls="clr-namespace:NetflixCloneMAUI.Controls"
+             xmlns:vm="clr-namespace:Netpli.ViewModels"
+             xmlns:controls="clr-namespace:Netplix.Controls"
              x:DataType="vm:HomeViewModel">
 
     <ContentPage.Resources>

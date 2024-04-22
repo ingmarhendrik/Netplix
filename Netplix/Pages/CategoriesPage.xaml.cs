@@ -2,20 +2,25 @@ using Netplix.ViewModels;
 
 namespace Netplix.Pages;
 
-public partial class MainPage : ContentPage
+public partial class CategoriesPage : ContentPage
 {
-	private readonly HomeViewModel _homeViewModel;
-	public MainPage(HomeViewModel homeViewModel)
-	{
-		InitializeComponent();
-		_homeViewModel = homeViewModel;
-		BindingContext = _homeViewModel;
-	}
+    private readonly CategoriesViewModel _categoriesViewModel;
+
+    public CategoriesPage(CategoriesViewModel categoriesViewModel)
+    {
+        InitializeComponent();
+        _categoriesViewModel = categoriesViewModel;
+        BindingContext = _categoriesViewModel;
+    }
 
     protected async override void OnAppearing()
     {
         base.OnAppearing();
-		await _homeViewModel.InitializeAsync();
+        await _categoriesViewModel.InitializeAsync();
     }
 
+    private async void CloseButton_Clicked(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync("..");
+    }
 }

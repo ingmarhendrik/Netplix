@@ -1,4 +1,4 @@
-using Models;
+using Netplix.Models;
 using Netplix.Pages;
 using Netplix.ViewModels;
 using System.Windows.Input;

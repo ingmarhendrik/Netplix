@@ -1,4 +1,4 @@
-﻿namespace NetflixCloneMAUI.Models
+﻿namespace Netplix.Models
 {
     public class Media
     {

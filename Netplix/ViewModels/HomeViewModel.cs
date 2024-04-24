@@ -1,6 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using Models;
+using Netplix.Models;
 using Netplix.Services;
 using System.Collections.ObjectModel;
 
